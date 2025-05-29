@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yes or No</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <div class="center">
+  <h2>First of all do you love me? &#128527; </h2> 
+  <div class="button-container">
+    <a href="you.html" style="text-decoration: none; color: #333;">
+    <button id="yesBtn" style="
+      transition: background-color 0.3s"
+      onmouseover="this.style.backgroundColor='black'"
+      onmouseout="this.style.backgroundColor='#f5f5dc'" >
+      <img src="smillingcat.jpg" alt="" >
+      Yes
+    </button>
+    </a>
+    <button id="noBtn" style="
+      transition: background-color 0.3s"
+      onmouseover="this.style.backgroundColor='black'"
+      onmouseout="this.style.backgroundColor='#f5f5dc'" >
+      <img src="sad cat.jpeg" alt="">
+      <a href="" style="text-decoration: none; color: #333;">No</a>
+    </button>
+  </div>
+  </div>
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    let fontSize = 16;
+    let padding = 10;
+
+    noBtn.addEventListener('click', () => {
+      fontSize += 2;
+      padding += 1;
+      yesBtn.style.fontSize = `${fontSize}px`;
+      yesBtn.style.padding = `${padding}px ${padding * 2}px`;
+    });
+  </script>
+</body>
+</html>
